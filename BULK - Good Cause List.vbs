@@ -158,7 +158,7 @@ For each worker in worker_array
 				'Using if...thens to decide if a case should be added to the array.  Replace MAXIS_case_number example with your desired case criteria,
 				'such as SNAP_status = "A", etc.
 				If MAXIS_case_number <> "        " then
-					IF instr(cash_status, " A " <> 0 or instr(cash_status, " P " <> 0 or HC_status = "A" or HC_status = "P" or ccap_status = "A" or ccap_status = "P" THEN
+					IF instr(cash_status, " A ") <> 0 or instr(cash_status, " P ") <> 0 or HC_status = "A" or HC_status = "P" or ccap_status = "A" or ccap_status = "P" THEN
 					redim preserve case_array(case_count) 'Resize the array for total cases'
 					set case_array(case_count) = new case_attributes 'This sets the value of the array at this location to be the case_attributes object, which holds your custom properties'
 					case_array(case_count).MAXIS_case_number = MAXIS_case_number
